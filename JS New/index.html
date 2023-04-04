@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="bootstrap/bootstrap.css" rel="stylesheet" >
+  <script src="bootstrap/jquery.js"></script>
+  <script src="bootstrap/jquery.dataTables.js"></script>
+  <link rel="stylesheet" href="bootstrap/jquery.dataTables.css">   
+  <link rel="stylesheet" href="css/cal.css">
+
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+  </header>
+  <div class="container">
+  <main>
+    <h1 class="text-center"> Calculate</h1>
+    <table class="table" id="tab1">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Val1</th>
+                <th>Val2</th>
+                <th>Add</th>
+                <th>Sub</th>
+                <th>Mul</th>
+                <th>Div</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+    <tbody></tbody></table>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"   >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Add Data</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="frm1">
+                <div class="mb-3">
+                  <label for="Val-1" class="col-form-label">Value 1:</label>
+                  <input type="number" required min="0" max="50" class="form-control val" id="Val-1">
+                </div>
+                <div class="mb-3">
+                  <label for="Val-2" class="col-form-label">Value 2:</label>
+                  <input type="number"  required min="0" max="50" class="form-control val" id="Val-2"></input>
+                </div>
+                <div class="mb-3">
+                    <div>
+                    <label for="Operation">Addition</label>
+                    <input type="checkbox" name="Operation" id="Add"></div>
+                    <div>
+                    <label for="Operation">Substraction</label>
+                    <input type="checkbox" name="Operation" id="Sub">
+                    </div>
+                    <div>
+                    <label for="Operation">Multiplication</label>
+                    <input type="checkbox" name="Operation" id="Mul">
+                    </div>
+                    <div>
+                    <label for="Operation">Division</label>
+                    <input type="checkbox" name="Operation" id="Div">
+                    </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" id="submit1" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- model2 -->
+      <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"   >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel1">Edit Data</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="frm2">
+                <div class="mb-3">
+                  <label for="Val-1" class="col-form-label">Value 1:</label>
+                  <input type="number" required min="0" max="50" class="form-control val2" id="Val1-1">
+                </div>
+                <div class="mb-3">
+                  <label for="Val-2" class="col-form-label">Val 2:</label>
+                  <input type="number"  required min="0" max="50" class="form-control val2" id="Val1-2"></input>
+                </div>
+                <div class="mb-3">
+                    <div>
+                    <label for="Operation">Addition</label>
+                    <input type="checkbox" name="Operation" id="Add1"></div>
+                    <div>
+                    <label for="Operation">Substraction</label>
+                    <input type="checkbox" name="Operation" id="Sub1">
+                    </div>
+                    <div>
+                    <label for="Operation">Multiplication</label>
+                    <input type="checkbox" name="Operation" id="Mul1">
+                    </div>
+                    <div>
+                    <label for="Operation">Division</label>
+                    <input type="checkbox" name="Operation" id="Div1">
+                    </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" id="submit2" class="btn btn-primary">Send message</button>
+            </div>
+          </div>
+        </div>
+      </div>  
+</main>
+<button type="button"  class="btn btn-primary" id="result" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"  >GetResult</button>
+</div>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="bootstrap/popper.js">
+  </script>
+
+  <script src="bootstrap/bootstrap.js">
+  </script>
+  <script src="js/cal.js"></script>
+</body>
+
+</html>
